@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Entity.notificationProviders.EmailProviderEntity" table="email_provider" schema="nscdb">
+        <id name="id">
+            <column name="id" sql-type="int(10) unsigned"/>
+        </id>
+        <property name="name">
+            <column name="name" sql-type="varchar(20)" length="20"/>
+        </property>
+        <property name="login">
+            <column name="login" sql-type="varchar(45)" length="45"/>
+        </property>
+        <property name="pass">
+            <column name="pass" sql-type="varchar(45)" length="45"/>
+        </property>
+        <property name="smtpServer">
+            <column name="smtp_server" sql-type="varchar(45)" length="45"/>
+        </property>
+        <property name="smtpPort">
+            <column name="smtp_port" sql-type="varchar(5)" length="5"/>
+        </property>
+        <property name="replyTo">
+            <column name="reply_to" sql-type="varchar(45)" length="45"/>
+        </property>
+        <property name="subject">
+            <column name="subject" sql-type="varchar(45)" length="45" not-null="false"/>
+        </property>
+        <property name="active">
+            <column name="active" sql-type="tinyint(1)"/>
+        </property>
+        <property name="signature">
+            <column name="signature" sql-type="varchar(45)" length="45"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Entity.HostEntity" table="host" schema="nscdb">
+        <id name="id">
+            <column name="id" sql-type="int(10) unsigned"/>
+        </id>
+        <property name="name">
+            <column name="name" sql-type="varchar(30)" length="30"/>
+        </property>
+        <property name="ipAddress">
+            <column name="ip_address" sql-type="varchar(45)" length="45"/>
+        </property>
+        <property name="isOnline">
+            <column name="is_online" sql-type="tinyint(1)"/>
+        </property>
+        <property name="isActive">
+            <column name="is_active" sql-type="tinyint(1)"/>
+        </property>
+        <property name="isWebpage">
+            <column name="is_webpage" sql-type="tinyint(1)"/>
+        </property>
+        <property name="containedWebclass">
+            <column name="contained_webclass" sql-type="varchar(45)" length="45"/>
+        </property>
+    </class>
+</hibernate-mapping>
